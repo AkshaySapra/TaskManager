@@ -15,12 +15,44 @@ public class MainScreen extends javax.swing.JFrame {
      * Creates new form MainScreen
      */
     int percentage=0;
+    int[] empty=new int[7];
+    
+    public void modifyTasks(){
+        if (empty[0]==0){
+           jCheckBox1.setText(jTextField1.getText()); 
+           empty[0]=1;
+        }
+        else if (empty[1]==0){
+            jCheckBox2.setText(jTextField1.getText()); 
+           empty[1]=1;
+        }
+        else if (empty[2]==0){
+            jCheckBox3.setText(jTextField1.getText()); 
+           empty[2]=1;
+        }
+        else if (empty[3]==0){
+            jCheckBox4.setText(jTextField1.getText()); 
+           empty[3]=1;
+        }
+        else if (empty[4]==0){
+            jCheckBox5.setText(jTextField1.getText()); 
+           empty[4]=1;
+        }
+        else if (empty[5]==0){
+            jCheckBox6.setText(jTextField1.getText()); 
+           empty[5]=1;
+        }
+        else if (empty[6]==0){
+            jCheckBox8.setText(jTextField1.getText()); 
+           empty[5]=1;
+        }
+        
+        
+    };
+    
     public MainScreen() {
         initComponents();
         
-        
-        
-
     }
     
     void addPercentage(){
@@ -66,6 +98,7 @@ public class MainScreen extends javax.swing.JFrame {
         jProgressBar1.setName("hr"); // NOI18N
 
         jCheckBox2.setText("Click to add item");
+        jCheckBox2.setToolTipText("");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox2ActionPerformed(evt);
@@ -269,7 +302,7 @@ public class MainScreen extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-        System.out.println("Yo");
+        modifyTasks();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
